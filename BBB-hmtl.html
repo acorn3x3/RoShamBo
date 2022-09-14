@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- title and favicon -->
+    <title>BBB</title>
+    <link rel="icon" type="image/x-icon" href="assets/batman logo.png" />
+
+    <!-- js -->
+    <script type="module" src="app.js"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+    <!-- css -->
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/BBB-game.css" />
+</head>
+
+<body>
+    <header>
+        
+        <h1>Batman <br>
+              Badman <br>
+               Barman </h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Scoreboard</h2>
+            <ul class="scores">
+                <p class="Scoreboard">
+                    wins: <span id="wins-display">0</span>
+                    losses: <span id="losses-display">0</span>
+                    total: <span id="total-display">0</span>
+                </li>
+                </p>
+            </ul>
+        </section>
+
+        <section id="fighers">
+            <h2>Fighters</h2>
+            <ul class="BBB nonuplets">
+                <li>
+                   <div class="batman-win">
+                    <img id="batman-win-id"  src="assets/batman-wins.PNG" alt="Batman wins">
+                </div>
+                </li>
+                <li>
+                    
+                    <div class="badman-win">  
+                    <img id="badman-win-pic"  src="assets/badman-win.gif" alt="badman wins">
+                </li>
+                <li>
+                    <div class="barman-win">
+                    <img id="barman-win-pic"  src= "assets/barman-win.jpg" alt="barman wins">
+                </li>
+                <li>
+                    <div class="batman-lose"></div>
+                    <img id="batman-lose-pic" src="assets/batman-badman-win.jpg" alt="Batman loses">
+                </li>
+                <li>
+                    <div class="badman-lose">
+                    <img id="badman-lose-pic" src="assets/badman-lose.jpg" alt="Badman Loses">
+                </li>
+                <li>
+                    <div class="barman-lose"></div>
+                    <img id="barman-lose-pic"  src="assets/barman-batman-win.PNG" alt="Barman loses">
+                </li>
+
+                <li>
+                    <div class="batman-tie"></div>
+                    <img id="batman-tie-pic" src="assets/batman-tie.jpg" alt="Batman tie">
+                </li>
+                <li>
+                    <div class="badman-tie">
+                    <img id="badman-tie-pic" src="assets/badman-tie.jpg" alt="Badman tie">
+                </li>
+                <li>
+                    <div class="barman-tie"></div>
+                    <img id="batman-tie-pic"  src="assets/batman-barman-win.jpg" alt="Barman tie">
+                </li>
+            </ul>
+
+            <div id="options" class="choices">
+                <button class='fighter' id="batman-choose">Batman</button>
+                <button class='fighter' id="badman-choose">Badman</button>
+                <button class='fighter' id="barman-choose">Barman</button>
+                
+            </div>
+
+            <section id="results">
+                <div class="results-section">
+                    <p class= hidden id="display-correct">Winner!</p>
+                    <p class= hidden id="display-incorrect">Loser!</p>
+                    <p class= hidden id="display-incorrect">Tie! Choose Again</p>
+                 
+                </div>
+
+                <button id='play-again-button'>Play Again</button>
+            </section>
+
+        </section>
+    </main>
+</body>
+
+</html>
