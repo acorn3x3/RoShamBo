@@ -4,15 +4,15 @@ import { getRandomItem } from './utils.js';
 /* State */
 let  gameState = 'choose'; //'choose' or 'results'
 let pick = ''; //batman,badman,barman
-let roshambo = '' ;//batman beats badman, badman beats barman, barman beats batman 
+let fight = '' ;//batman beats badman, badman beats barman, barman beats batman 
 let result = ''; //win lose tie 
 
-let roshams = 0;
+let fights = 0;
 let wins = 0;
 let losses = 0;
 
 //probability array
-const rsb = [0,1,2,3,4,5,6,7,8];
+const bbb = [0,1,2,3,4,5,6,7,8];
 
 
 
@@ -55,9 +55,9 @@ function displayScoreboard() {
 }
 /* Component */
 // get DOM
-const flipShell1 = document.getElementById('1');
-const flipShell2 = document.getElementById('2');
-const flipShell3 = document.getElementById('3');
+const batmanChoose = document.getElementById('batman');
+const badmanChoose = document.getElementById('2');
+const barmanChoose = document.getElementById('3');
 
 
 // display
@@ -70,15 +70,15 @@ function displayGuess() {
     if (gameState === 'results') {
          if (guess === shell) {
             
-        flipShell1.classList.add('win');
+        //flipShell1.classList.add('win');
         //flipShell2.classList.add('win');
         //flipShell3.classList.add('win');
     }
 
     else {
-        flipShell1.classList.add('lose');
-        flipShell2.classList.add('lose');
-        flipShell3.classList.add('lose');
+        //flipShell1.classList.add('lose');
+        //flipShell2.classList.add('lose');
+        //flipShell3.classList.add('lose');
     }};
 
         
@@ -92,13 +92,13 @@ function displayGuess() {
     //playAgain();
 //});
 Batman.addEventListener('click', () => {
-        flipShell('flip-shell-1');
+    batmanChoose('batman-choose');
     });
 badman.addEventListener('click', () => {
-        flipShell('flip-shell-2');
+    batmanChoose('badman-choose');
     });
 barman.addEventListener('click', () => {
-        flipShell('flip-shell-3');
+    batmanChoose('barman-choose');
     });
 
 
